@@ -716,6 +716,37 @@
     updateStats();
     renderWords();
     renderMeetings();
+    syncCards();
+  }
+
+  /** Reconcile the flashcard deck with the latest vocab after an in-dashboard
+      add/remove, WITHOUT resetting the user's position, shuffle order, or flip
+      state: newly saved words are appended to the deck, removed ones drop out,
+      and we stay on whatever card was showing. */
+  function syncCards() {
+    const prevOrderIds = cardOrder.map((i) => cards[i] && cards[i].id).filter(Boolean);
+    const currentId = cardOrder.length ? (cards[cardOrder[cardIndex]] || {}).id : null;
+
+    cards = activeWords();
+    const indexById = new Map(cards.map((c, i) => [c.id, i]));
+
+    const order = [];
+    const seen = new Set();
+    prevOrderIds.forEach((id) => {
+      const idx = indexById.get(id);
+      if (idx !== undefined) {
+        order.push(idx);
+        seen.add(id);
+      }
+    });
+    cards.forEach((c, i) => {
+      if (!seen.has(c.id)) order.push(i);
+    });
+    cardOrder = order;
+
+    const pos = currentId ? cardOrder.findIndex((i) => cards[i].id === currentId) : -1;
+    cardIndex = pos >= 0 ? pos : Math.min(cardIndex, Math.max(0, cardOrder.length - 1));
+    renderCard();
   }
 
   /* ---------------- export ---------------- */
