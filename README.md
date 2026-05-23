@@ -40,7 +40,7 @@ A free, fully‑local Chrome extension (Manifest V3) that turns **Google Meet ca
 
 ## 🧠 How it works
 
-![How it works](screenshots/hero.svg)
+![How it works](screenshots/hero.png)
 
 1. Join a Google Meet call and turn on captions (CC).
 2. Click any word in the caption box to see its meaning — it's saved automatically.
