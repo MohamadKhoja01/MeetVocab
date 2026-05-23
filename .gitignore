@@ -1,0 +1,20 @@
+# Local tooling / preview (not part of the extension)
+.claude/
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Packaged builds
+*.zip
+*.crx
+*.pem
+
+# Dependencies (none used, but just in case)
+node_modules/
