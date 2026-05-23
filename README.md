@@ -24,6 +24,20 @@ A free, fully‑local Chrome extension (Manifest V3) that turns **Google Meet ca
 - **📤 Export** — download your words grouped by meeting as Markdown or plain text.
 - **🌐 Multilingual UI** — interface available in **English, العربية, Türkçe** (definitions always stay English).
 
+## 📸 Screenshots
+
+**During a meeting — click any caption word for an instant English definition, then save it:**
+
+![In‑meeting word lookup](screenshots/in-meeting.png)
+
+**Dashboard — organize your vocabulary into custom sections and browse it by meeting:**
+
+![Dashboard](screenshots/dashboard.png)
+
+**Review everything with flashcards:**
+
+![Flashcards](screenshots/flashcards.png)
+
 ## 🧠 How it works
 
 ![How it works](screenshots/hero.svg)
@@ -97,9 +111,23 @@ icons/                   Extension icons (16 / 32 / 48 / 128)
 
 ---
 
+## Türkçe
+
+**MeetVocab**, Google Meet görüşmeleri sırasında İngilizce öğrenenlere yardımcı olan ücretsiz bir Chrome uzantısıdır. Canlı altyazıdaki (CC) herhangi bir kelimeye tıklayınca **İngilizce anlamı** telaffuzuyla birlikte görünür ve kelime otomatik olarak kaydedilir; daha sonra kartlarla tekrar edebilirsiniz.
+
+- **%100 yerel** — tüm verileriniz cihazınızda kalır, hesap ve takip yok.
+- **Yapay zekâ yok, API anahtarı yok, hiçbir ücret yok.**
+- Kelimeleri **bölümlere** ayır, **öğrenildi** olarak işaretle, **toplantıya** göre gözat.
+- İsteğe bağlı **çevrimdışı çeviri** (Arapça / Türkçe).
+- Üç dilli arayüz: İngilizce, Arapça, Türkçe (tanımlar İngilizce kalır).
+
+**Kurulum:** `chrome://extensions` → **Geliştirici modu**'nu açın → **Paketlenmemiş öğe yükle** ile proje klasörünü seçin.
+
+---
+
 <div dir="rtl">
 
-## 🇸🇦 نبذة بالعربية
+## العربية
 
 **MeetVocab** إضافة مجانية لمتصفّح Chrome تساعد متعلّمي الإنجليزية أثناء اجتماعات Google Meet. تنقر أي كلمة في الترجمة المباشرة (CC) فيظهر **معناها بالإنجليزية**، مع نطقها، وتُحفظ تلقائيًا في مفرداتك لمراجعتها لاحقًا بالبطاقات.
 
